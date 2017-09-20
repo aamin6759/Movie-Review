@@ -46,7 +46,7 @@ public class GetAllCrewData {
             , final ArrayList<MovieDetails> addCastInfo)
     {
         String URL = context.getString(R.string.CREW_URL)+"/"+movieID+"?api_key="+
-                context.getString(R.string.APP_ID)+"&append_to_response=casts&language=en-US";
+                context.getString(R.string.APP_ID)+"&append_to_response=videos,casts&language=en-US";
 
 
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -58,6 +58,8 @@ public class GetAllCrewData {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray castJSONArrayData = response.getJSONObject("casts").getJSONArray("cast");
+                            String URL = response.getJSONObject("videos").getJSONArray("results").getJSONObject(0).getString("key");
+                            addCastInfo.get(CastInfoPositionToAddCrewInfo).setYoutubeURL(URL);
                             setCastDataInMovieArrayListBy(castJSONArrayData,CastInfoPositionToAddCrewInfo,addCastInfo);
                         } catch (JSONException e) {
                             e.printStackTrace();

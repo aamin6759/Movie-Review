@@ -1,6 +1,7 @@
 package the.moviereview.MovieTask;
 
 import android.content.Context;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -22,11 +23,15 @@ public class MovieDetails {
     private String pictureURL;
     private String movieID;
     private String overView;
+    private String youtubeURL;
+
     private Context context;
+
     private ArrayList<CastDetails> castDetails;
 
     public MovieDetails(Context context) {
         this.context = context;
+        this.youtubeURL = "";
         this.castDetails = null;
         this.movieName = "";
         this.movieGenre = "";
@@ -34,6 +39,14 @@ public class MovieDetails {
         this.overView = "";
         this.movieID = "";
         this.pictureURL = context.getString(R.string.IMAGE_URL);
+    }
+
+    public String getYoutubeURL() {
+        return youtubeURL;
+    }
+
+    public void setYoutubeURL(String youtubeURL) {
+        this.youtubeURL = youtubeURL;
     }
 
     public String getOverView() {
@@ -99,9 +112,30 @@ public class MovieDetails {
 
     private String getGenreNameFrom_string_xml(Context context,String fullGenreID)//to get data from STRING.XML to get movie genre through string
     {
-        String packageName = context.getPackageName();/*genre_10770*/
-        int resId = context.getResources().getIdentifier(("genre_"+fullGenreID), "string", packageName);
-        return context.getString(resId);
+        switch (fullGenreID)
+        {
+           default:
+               return context.getString(R.string.genre_12);
+        }
+//            <string name="genre_28">Action</string>
+//    <string name="genre_12">Adventure</string>
+//    <string name="genre_16">Animation</string>
+//    <string name="genre_35">Comedy</string>
+//    <string name="genre_80">Crime</string>
+//    <string name="genre_99">Documentary</string>
+//    <string name="genre_18">Drama</string>
+//    <string name="genre_10751">Family</string>
+//    <string name="genre_14">Fantasy</string>
+//    <string name="genre_36">History</string>
+//    <string name="genre_27">Horror</string>
+//    <string name="genre_10402">Music</string>
+//    <string name="genre_9648">Mystery</string>
+//    <string name="genre_10749">Romance</string>
+//    <string name="genre_878">Science Fiction</string>
+//    <string name="genre_10770">TV Movie</string>
+//    <string name="genre_53">Thriller</string>
+//    <string name="genre_10752">War</string>
+//    <string name="genre_37">Western</string>
     }
 
     public ArrayList<CastDetails> getCastDetails() {

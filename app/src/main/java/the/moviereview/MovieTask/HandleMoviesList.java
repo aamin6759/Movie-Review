@@ -12,6 +12,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,6 +62,7 @@ public class HandleMoviesList {
                 movieDetails.setReleaseDate(JSON_MovieObject.getString("release_date"));
                 movieDetails.setOverView(JSON_MovieObject.getString("overview"));
                 allMovieDetailsList.add(movieDetails);
+                Picasso.with(context).load(movieDetails.getPictureURL());
             } catch (JSONException e) {
 
             }

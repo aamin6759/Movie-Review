@@ -32,5 +32,6 @@
     <string name="VIDEO_URL">https://api.themoviedb.org/3/movie</string>
     <string name="CREW_URL">https://api.themoviedb.org/3/movie</string>
     <string name="IMAGE_URL">https://image.tmdb.org/t/p/original</string>
+    <string name="YOUTUBE_URL">https://www.youtube.com/watch?v=</string>
     
 </resources>
