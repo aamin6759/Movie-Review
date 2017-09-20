@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Movie Review</string>
+
+
+
+
+    <!--**************************************************-->
+    <string name="genre_28">Action</string>
+    <string name="genre_12">Adventure</string>
+    <string name="genre_16">Animation</string>
+    <string name="genre_35">Comedy</string>
+    <string name="genre_80">Crime</string>
+    <string name="genre_99">Documentary</string>
+    <string name="genre_18">Drama</string>
+    <string name="genre_10751">Family</string>
+    <string name="genre_14">Fantasy</string>
+    <string name="genre_36">History</string>
+    <string name="genre_27">Horror</string>
+    <string name="genre_10402">Music</string>
+    <string name="genre_9648">Mystery</string>
+    <string name="genre_10749">Romance</string>
+    <string name="genre_878">Science Fiction</string>
+    <string name="genre_10770">TV Movie</string>
+    <string name="genre_53">Thriller</string>
+    <string name="genre_10752">War</string>
+    <string name="genre_37">Western</string>
+
+    <!--**************************************************-->
+
+    <string name="APP_ID">2dbab0902aa24b6e7fe12db65256f7db</string>
+    <string name="MOVIE_URL">https://api.themoviedb.org/3/search/movie</string>
+    <string name="VIDEO_URL">https://api.themoviedb.org/3/movie</string>
+    <string name="CREW_URL">https://api.themoviedb.org/3/movie</string>
+    <string name="IMAGE_URL">https://image.tmdb.org/t/p/original</string>
+    
+</resources>
